@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+:root {
+    --color-primary: #d2a4e0;
+    --color-button: #b36dc8;
+    --color-hover: #984eab;
+    --color-active: #7e3e8d;
+    --color-info: #3498db;
+    --color-light: #f5f5f5;
+    --color-dark: #34495e;
+}
+
+@keyframes aparecerDesdeArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    font-family: 'Cookie', cursive;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    background: linear-gradient(to right, var(--color-primary), var(--color-active));
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-active);
+    margin-top: 20px;
+    font-size: 8vw;
+}
+
+.container {
+    width: 40%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 15px 10px;
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1.5rem;
+}
+
+.li-container {
+    background-color: white;
+    width: 100%;
+    color: darkslategray;
+    margin-top: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    animation: aparecerDesdeArriba 0.5s ease-in-out;
+    background: linear-gradient(to right, var(--color-primary), var(--color-button));
+}
+
+li p {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+}
+
+.btn-delete {
+    border: none;
+    background-color: #e31746;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: auto;
+    outline: none;
+    width: 10%;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
+}
+
+.btn-add {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    background-color: var(--color-button);
+    font-size: 2.5rem;
+    outline: none;
+}
+
+.btn-add:hover {
+    cursor: pointer;
+    background-color: var(--color-active);
+}
+
+.empty {
+    color: darkslategrey;
+}
+
+p {
+    font-size: 1.5rem;
+    text-align: center;
+}
